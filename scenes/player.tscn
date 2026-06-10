@@ -9,8 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://o47e8reig2ns" path="res://sprites/UI_BG.png" id="7_ur7pv"]
 [ext_resource type="Texture2D" uid="uid://blrhqnacjx8wo" path="res://sprites/needle.png" id="8_a8ls1"]
 [ext_resource type="AudioStream" uid="uid://byiwjdrkj8iwf" path="res://sounds/UISelect.mp3" id="8_ur7pv"]
+[ext_resource type="Texture2D" uid="uid://fj6lowdrvwx" path="res://sprites/barempty.png" id="9_qfm1y"]
 [ext_resource type="AudioStream" uid="uid://b2fjwn6moovoq" path="res://sounds/UIAccept.mp3" id="9_y4r1p"]
 [ext_resource type="AudioStream" uid="uid://cuhd4wchokub5" path="res://sounds/step.wav" id="10_3v2ag"]
+[ext_resource type="Texture2D" uid="uid://b61aughq4o41u" path="res://sprites/barfull.png" id="10_fulsm"]
 [ext_resource type="AudioStream" uid="uid://c4fewmyb0438w" path="res://sounds/jump.wav" id="11_jej6c"]
 [ext_resource type="AudioStream" uid="uid://bsf6hjqfw0oq5" path="res://sounds/die.wav" id="12_f1ej7"]
 [ext_resource type="AudioStream" uid="uid://dgivu7vttfp6u" path="res://sounds/portal.mp3" id="13_jej6c"]
@@ -236,6 +238,29 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="DoorBar" type="TextureProgressBar" parent="CanvasLayer/Control" unique_id=739909772]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -154.0
+offset_top = -155.0
+offset_right = -74.0
+offset_bottom = -115.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(4, 4)
+step = 0.1
+fill_mode = 4
+radial_initial_angle = 270.0
+radial_fill_degrees = 180.0
+radial_center_offset = Vector2(0, 20.005)
+texture_under = ExtResource("9_qfm1y")
+texture_progress = ExtResource("10_fulsm")
+
 [node name="Meter" type="Sprite2D" parent="CanvasLayer/Control" unique_id=404425514]
 texture_filter = 1
 position = Vector2(582, 589)
@@ -300,12 +325,6 @@ theme_override_fonts/font = ExtResource("6_smehm")
 theme_override_font_sizes/font_size = 28
 text = "Pause"
 vertical_alignment = 1
-
-[node name="TIMERDEBUG" type="Label" parent="CanvasLayer/Control" unique_id=415239526]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "TIMER DEBUG: AAAAAA"
 
 [node name="PauseMenu" type="Control" parent="CanvasLayer" unique_id=381802466]
 process_mode = 2
@@ -485,6 +504,9 @@ bus = &"portal"
 [node name="Invuln" type="Timer" parent="." unique_id=24765938]
 one_shot = true
 
+[node name="DoorTimer" type="Timer" parent="." unique_id=1526158625]
+one_shot = true
+
 [connection signal="button_up" from="CanvasLayer/Control/Pause" to="." method="_on_pause_button_up"]
 [connection signal="mouse_entered" from="CanvasLayer/Control/Pause" to="." method="_on_pause_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/Control/Pause" to="." method="_on_pause_mouse_exited"]
@@ -496,3 +518,4 @@ one_shot = true
 [connection signal="mouse_exited" from="CanvasLayer/PauseMenu/Quit" to="." method="_on_quit_mouse_exited"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="timeout" from="Invuln" to="." method="_on_invuln_timeout"]
+[connection signal="timeout" from="DoorTimer" to="." method="_on_door_timer_timeout"]

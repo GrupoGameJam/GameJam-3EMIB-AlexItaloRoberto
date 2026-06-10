@@ -18,6 +18,7 @@ var passo_timer := 0.0
 var no_passado = false
 var morto = false
 var pode_porta = true
+var pode_porta2 = true
 
 func esta_dentro_de_parede() -> bool:
 	var collision_shape = $CollisionShape2D
@@ -61,6 +62,8 @@ func morrer():
 func spawnar_porta():
 	if !pode_porta:
 		return
+	if !pode_porta2:
+		return
 	if morto:
 		return
 	var porta = get_tree().get_nodes_in_group('portas')
@@ -72,6 +75,8 @@ func spawnar_porta():
 		get_tree().root.add_child(instancia)
 		instancia.global_position.x = global_position.x
 		instancia.global_position.y = global_position.y-18
+		pode_porta2 = false
+		$DoorTimer.start()
 	else:
 		for p in porta:
 			p.delete()
@@ -81,14 +86,21 @@ func spawnar_porta():
 		get_tree().root.add_child(instancia)
 		instancia.global_position.x = global_position.x
 		instancia.global_position.y = global_position.y-18
+		pode_porta2 = false
+		$DoorTimer.start()
 
 func _process(delta: float) -> void:
-	$CanvasLayer/Control/TIMERDEBUG.text = 'TIMER DEBUG: '+str(invuln.time_left)+' '+str(esta_invuln)
+	$CanvasLayer/Control/DoorBar.value = $DoorTimer.time_left * 100
+	if $DoorTimer.is_stopped():
+		$CanvasLayer/Control/DoorBar.value = 100
 	if morto:
 		return
 	if Input.is_action_just_pressed("portal"):
 		spawnar_porta()
-	
+	if esta_invuln:
+		modulate.a = 0.5
+	else:
+		modulate.a = 1
 	var portaarray = get_tree().get_nodes_in_group("portas")
 	if portaarray:
 		if !pode_porta:
@@ -292,3 +304,7 @@ func _on_quit_mouse_entered() -> void:
 
 func _on_invuln_timeout() -> void:
 	esta_invuln = false
+
+
+func _on_door_timer_timeout() -> void:
+	pode_porta2 = true

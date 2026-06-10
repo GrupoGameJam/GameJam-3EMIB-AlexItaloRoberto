@@ -147,20 +147,34 @@ texture = ExtResource("5_vqwqk")
 
 [node name="PointLight2D2" type="PointLight2D" parent="past" unique_id=841404420]
 texture_filter = 1
-position = Vector2(864, -91)
+position = Vector2(1055, -87)
 scale = Vector2(14.999999, 13.625)
 energy = 0.4
 texture = ExtResource("5_vqwqk")
 
 [node name="PointLight2D3" type="PointLight2D" parent="past" unique_id=1439239009]
 texture_filter = 1
-position = Vector2(1886, -91)
+position = Vector2(1954, -89)
 scale = Vector2(14.999999, 13.625)
 energy = 0.4
 texture = ExtResource("5_vqwqk")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="past" unique_id=585977641]
 color = Color(1.410517, 1.0455337, 0.8875559, 1)
+
+[node name="PointLight2D4" type="PointLight2D" parent="past" unique_id=290017197]
+texture_filter = 1
+position = Vector2(2847, -95.00006)
+scale = Vector2(14.999999, 13.625)
+energy = 0.4
+texture = ExtResource("5_vqwqk")
+
+[node name="PointLight2D5" type="PointLight2D" parent="past" unique_id=1361624895]
+texture_filter = 1
+position = Vector2(3744, -93.000015)
+scale = Vector2(14.999999, 13.625)
+energy = 0.4
+texture = ExtResource("5_vqwqk")
 
 [node name="present" type="Node2D" parent="." unique_id=2048277793 groups=["present"]]
 
