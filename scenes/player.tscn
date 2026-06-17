@@ -326,6 +326,12 @@ theme_override_font_sizes/font_size = 28
 text = "Pause"
 vertical_alignment = 1
 
+[node name="ArrayLabel" type="Label" parent="CanvasLayer/Control" unique_id=2039395967]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "LABEL MT FODA"
+
 [node name="PauseMenu" type="Control" parent="CanvasLayer" unique_id=381802466]
 process_mode = 2
 visible = false

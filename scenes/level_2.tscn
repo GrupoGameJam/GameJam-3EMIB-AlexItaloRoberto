@@ -5,6 +5,7 @@
 [ext_resource type="TileSet" uid="uid://c65q7hcn6hrwt" path="res://tilesets/new_tile_set.tres" id="3_y0kc7"]
 [ext_resource type="Texture2D" uid="uid://i8mwfko0sbqr" path="res://sprites/gradient.png" id="4_172wr"]
 [ext_resource type="Texture2D" uid="uid://c647hwq5qhr2i" path="res://sprites/light.png" id="5_g2hoc"]
+[ext_resource type="PackedScene" uid="uid://djnmkxvav3qa3" path="res://scenes/star.tscn" id="6_172wr"]
 [ext_resource type="PackedScene" uid="uid://duby6l6s2o87n" path="res://scenes/player.tscn" id="6_fldb1"]
 [ext_resource type="PackedScene" uid="uid://dv7r80tmrpk76" path="res://scenes/boundary.tscn" id="7_guvtl"]
 [ext_resource type="PackedScene" uid="uid://b1e16c038r8a0" path="res://scenes/dialog_trigger.tscn" id="8_ne2mo"]
@@ -166,6 +167,10 @@ position = Vector2(3680, -90.00002)
 scale = Vector2(14.999999, 13.625)
 energy = 0.4
 texture = ExtResource("5_g2hoc")
+
+[node name="Star" parent="past" unique_id=621094863 instance=ExtResource("6_172wr")]
+position = Vector2(2549, -28)
+starID = 2
 
 [node name="present" type="Node2D" parent="." unique_id=1126576592 groups=["present"]]
 

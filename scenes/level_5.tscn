@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dv7r80tmrpk76" path="res://scenes/boundary.tscn" id="6_1q3ip"]
 [ext_resource type="Script" uid="uid://uap0wrfumhmd" path="res://scripts/block_porta.gd" id="6_uva14"]
 [ext_resource type="PackedScene" uid="uid://duby6l6s2o87n" path="res://scenes/player.tscn" id="7_e4ab4"]
+[ext_resource type="PackedScene" uid="uid://djnmkxvav3qa3" path="res://scenes/star.tscn" id="7_jwrea"]
 [ext_resource type="PackedScene" uid="uid://b1e16c038r8a0" path="res://scenes/dialog_trigger.tscn" id="8_ij176"]
 [ext_resource type="Script" uid="uid://cqi3k1co2do3t" path="res://scripts/trigger_final.gd" id="10_e4ab4"]
 [ext_resource type="Shader" uid="uid://bx3mc7q331i54" path="res://scripts/text.gdshader" id="11_xxvx7"]
@@ -235,6 +236,10 @@ color = Color(0.94536644, 0.93634033, 0, 1)
 energy = 0.95
 texture = ExtResource("5_vqwqk")
 texture_scale = 7.99
+
+[node name="Star" parent="present" unique_id=621094863 instance=ExtResource("7_jwrea")]
+position = Vector2(2870, -55)
+starID = 5
 
 [node name="Boundary" parent="." unique_id=495605630 instance=ExtResource("6_1q3ip")]
 position = Vector2(295, 630)

@@ -1,0 +1,249 @@
+[gd_scene format=3 uid="uid://djnmkxvav3qa3"]
+
+[ext_resource type="Script" uid="uid://bvrbmfle7i4vn" path="res://scripts/star.gd" id="1_8d8bx"]
+[ext_resource type="Shader" uid="uid://brdtulkcbvey" path="res://scripts/star.gdshader" id="1_j6vao"]
+[ext_resource type="Texture2D" uid="uid://csyue60q5eqep" path="res://sprites/star.png" id="2_ef0hr"]
+[ext_resource type="Texture2D" uid="uid://debsakrlmlkfs" path="res://sprites/UIStar.png" id="4_8lrp4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8d8bx"]
+radius = 50.039986
+
+[sub_resource type="Gradient" id="Gradient_j6vao"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ef0hr"]
+gradient = SubResource("Gradient_j6vao")
+fill_from = Vector2(0, 0.08045977)
+fill_to = Vector2(0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8d8bx"]
+shader = ExtResource("1_j6vao")
+shader_parameter/main_color = SubResource("GradientTexture2D_ef0hr")
+shader_parameter/shine_progress = 0.0
+shader_parameter/shine_size = 0.1
+shader_parameter/shine_angle = 45.0
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_sxbdi"]
+particle_flag_disable_z = true
+angle_min = -701.2
+angle_max = 588.10004
+gravity = Vector3(0, 0, 0)
+tangential_accel_min = -593.25
+tangential_accel_max = 624.8
+
+[sub_resource type="Animation" id="Animation_sxbdi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Area2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Area2D/Sprite2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4, 4)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Area2D/Sprite2D:material:shader_parameter/shine_progress")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Area2D/GPUParticles2D:emitting")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Area2D:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_fi7gj"]
+resource_name = "pickup"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D/GPUParticles2D:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Area2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.31864017, 1),
+"update": 0,
+"values": [0.0, 6.2831855]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Area2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.2871746, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1e-05, 1e-05)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_pexwv"]
+resource_name = "wobble"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4, 5, 6),
+"transitions": PackedFloat32Array(0.35355344, 0.35355344, 4.0000005, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(0, -15), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Area2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4, 6),
+"transitions": PackedFloat32Array(0.2588163, 0.2588163, 1),
+"update": 0,
+"values": [0.0, 0.0, 6.2831855]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Area2D/Sprite2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3.6, 4, 4.2),
+"transitions": PackedFloat32Array(1, 2.2973976, 1, 1),
+"update": 0,
+"values": [Vector2(4, 4), Vector2(4, 4), Vector2(4, 3.015), Vector2(4, 4)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Area2D/Sprite2D:material:shader_parameter/shine_progress")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3.3, 4.3, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.999999977648, 0.999999977648]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fi7gj"]
+_data = {
+&"RESET": SubResource("Animation_sxbdi"),
+&"pickup": SubResource("Animation_fi7gj"),
+&"wobble": SubResource("Animation_pexwv")
+}
+
+[node name="Star" type="Node2D" unique_id=621094863]
+script = ExtResource("1_8d8bx")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=440270965]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1650483350]
+shape = SubResource("CircleShape2D_8d8bx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=913073434]
+texture_filter = 1
+material = SubResource("ShaderMaterial_8d8bx")
+scale = Vector2(4, 4)
+texture = ExtResource("2_ef0hr")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Area2D" unique_id=950856445]
+texture_filter = 1
+emitting = false
+amount = 16
+texture = ExtResource("4_8lrp4")
+one_shot = true
+process_material = SubResource("ParticleProcessMaterial_sxbdi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=765014880]
+libraries/ = SubResource("AnimationLibrary_fi7gj")
+autoplay = &"wobble"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

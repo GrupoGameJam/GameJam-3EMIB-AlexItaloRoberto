@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dv7r80tmrpk76" path="res://scenes/boundary.tscn" id="4_5xbjy"]
 [ext_resource type="Texture2D" uid="uid://i8mwfko0sbqr" path="res://sprites/gradient.png" id="5_e3sih"]
 [ext_resource type="PackedScene" uid="uid://b1e16c038r8a0" path="res://scenes/dialog_trigger.tscn" id="6_2os1m"]
+[ext_resource type="PackedScene" uid="uid://djnmkxvav3qa3" path="res://scenes/star.tscn" id="7_2aecg"]
 [ext_resource type="PackedScene" uid="uid://bmerwvg30np81" path="res://scenes/tutorial_keys.tscn" id="10_2os1m"]
 [ext_resource type="PackedScene" uid="uid://ck8t7274eq2pc" path="res://scenes/final_level.tscn" id="10_2y5yt"]
 [ext_resource type="Script" uid="uid://d3xdejpvrov1v" path="res://scripts/delete_trigger2.gd" id="11_2os1m"]
@@ -193,6 +194,10 @@ color = Color(0.40204772, 0.5975935, 0.74601835, 1)
 position = Vector2(1086.9999, -25.999996)
 scale = Vector2(4.995, 11.92)
 text = "Parece que tinha uma ponte aqui a tempos atrás... Talvez o passado tenha a resposta."
+
+[node name="Star" parent="present" unique_id=621094863 instance=ExtResource("7_2aecg")]
+position = Vector2(1463, -86)
+starID = 1
 
 [node name="Player" parent="." unique_id=55856584 instance=ExtResource("2_rus8k")]
 position = Vector2(112, 11)

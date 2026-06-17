@@ -21,6 +21,11 @@ boot_splash/minimum_display_time=2000
 
 levels="*uid://cilegdub482lv"
 songs="*uid://mmjh2raw0hmx"
+pickups="*uid://dxvj50biwmdd"
+
+[display]
+
+window/stretch/mode="viewport"
 
 [editor_plugins]
 
