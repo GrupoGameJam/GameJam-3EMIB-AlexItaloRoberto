@@ -14,7 +14,9 @@
 [ext_resource type="AudioStream" uid="uid://cuhd4wchokub5" path="res://sounds/step.wav" id="10_3v2ag"]
 [ext_resource type="Texture2D" uid="uid://b61aughq4o41u" path="res://sprites/barfull.png" id="10_fulsm"]
 [ext_resource type="AudioStream" uid="uid://c4fewmyb0438w" path="res://sounds/jump.wav" id="11_jej6c"]
+[ext_resource type="Texture2D" uid="uid://debsakrlmlkfs" path="res://sprites/UIStar.png" id="12_4r5pv"]
 [ext_resource type="AudioStream" uid="uid://bsf6hjqfw0oq5" path="res://sounds/die.wav" id="12_f1ej7"]
+[ext_resource type="Script" uid="uid://dmngluqn7a6we" path="res://scripts/UIstar.gd" id="13_60mlk"]
 [ext_resource type="AudioStream" uid="uid://dgivu7vttfp6u" path="res://sounds/portal.mp3" id="13_jej6c"]
 [ext_resource type="Shader" uid="uid://btoy852d464yj" path="res://scripts/vinheta.gdshader" id="15_oprun"]
 
@@ -326,12 +328,6 @@ theme_override_font_sizes/font_size = 28
 text = "Pause"
 vertical_alignment = 1
 
-[node name="ArrayLabel" type="Label" parent="CanvasLayer/Control" unique_id=2039395967]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "LABEL MT FODA"
-
 [node name="PauseMenu" type="Control" parent="CanvasLayer" unique_id=381802466]
 process_mode = 2
 visible = false
@@ -465,6 +461,41 @@ theme_override_fonts/font = ExtResource("6_smehm")
 theme_override_font_sizes/font_size = 62
 text = "Pause"
 vertical_alignment = 1
+
+[node name="Star" type="Sprite2D" parent="CanvasLayer/PauseMenu" unique_id=143141562]
+texture_filter = 1
+position = Vector2(541.5, 518.5)
+texture = ExtResource("12_4r5pv")
+script = ExtResource("13_60mlk")
+ID = 1
+
+[node name="Star2" type="Sprite2D" parent="CanvasLayer/PauseMenu" unique_id=494758984]
+texture_filter = 1
+position = Vector2(560.1244, 518.5)
+texture = ExtResource("12_4r5pv")
+script = ExtResource("13_60mlk")
+ID = 2
+
+[node name="Star3" type="Sprite2D" parent="CanvasLayer/PauseMenu" unique_id=793322138]
+texture_filter = 1
+position = Vector2(578.6124, 518.5)
+texture = ExtResource("12_4r5pv")
+script = ExtResource("13_60mlk")
+ID = 3
+
+[node name="Star4" type="Sprite2D" parent="CanvasLayer/PauseMenu" unique_id=865548217]
+texture_filter = 1
+position = Vector2(597.10046, 518.5)
+texture = ExtResource("12_4r5pv")
+script = ExtResource("13_60mlk")
+ID = 4
+
+[node name="Star5" type="Sprite2D" parent="CanvasLayer/PauseMenu" unique_id=456071941]
+texture_filter = 1
+position = Vector2(615.89233, 518.5)
+texture = ExtResource("12_4r5pv")
+script = ExtResource("13_60mlk")
+ID = 5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=36220785]
 libraries/ = SubResource("AnimationLibrary_qlg0r")

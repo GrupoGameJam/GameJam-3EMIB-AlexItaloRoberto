@@ -190,8 +190,6 @@ texture = ExtResource("1_48p14")
 21:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 22:0/0 = 0
 22:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 0, -8, 0)
-23:0/0 = 0
-23:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 22:3/0 = 0
 22:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 21:3/0 = 0
@@ -227,6 +225,7 @@ texture = ExtResource("1_48p14")
 24:4/0 = 0
 25:4/0 = 0
 26:4/0 = 0
+23:0/0 = 0
 
 [resource]
 physics_layer_0/collision_layer = 1

@@ -90,7 +90,6 @@ func spawnar_porta():
 		$DoorTimer.start()
 
 func _process(delta: float) -> void:
-	$CanvasLayer/Control/ArrayLabel.text = str(pickups.stars)
 	$CanvasLayer/Control/DoorBar.value = $DoorTimer.time_left * 100
 	if $DoorTimer.is_stopped():
 		$CanvasLayer/Control/DoorBar.value = 100

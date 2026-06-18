@@ -7,6 +7,8 @@ var direction = 1
 
 @onready var floor_left = $FloorLeft #deve ter o mesmo nome do nó
 @onready var floor_right = $FloorRight
+@onready var wall_right: RayCast2D = $WallRight
+@onready var wall_left: RayCast2D = $WallLeft
 @onready var anim = $AnimatedSprite2D
 
 func _physics_process(delta):
@@ -18,6 +20,10 @@ func _physics_process(delta):
 	if not floor_left.is_colliding():
 		direction = 1
 	if not floor_right.is_colliding():
+		direction = -1
+	if wall_left.is_colliding():
+		direction = 1
+	if wall_right.is_colliding():
 		direction = -1
 		# Aplica velocidade no eixo x
 	velocity.x = direction * SPEED

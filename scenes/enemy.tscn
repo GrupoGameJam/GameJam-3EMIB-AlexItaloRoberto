@@ -164,6 +164,14 @@ target_position = Vector2(-20, 10)
 position = Vector2(0, 5)
 target_position = Vector2(20, 10)
 
+[node name="WallRight" type="RayCast2D" parent="." unique_id=4680995]
+position = Vector2(0, 9)
+target_position = Vector2(22, 0)
+
+[node name="WallLeft" type="RayCast2D" parent="." unique_id=684082893]
+position = Vector2(0, 9)
+target_position = Vector2(-22, 0)
+
 [node name="Killzone" parent="." unique_id=1198240105 instance=ExtResource("4_5uy6h")]
 position = Vector2(20, 1)
 
