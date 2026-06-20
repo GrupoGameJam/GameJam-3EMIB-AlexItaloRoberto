@@ -42,6 +42,7 @@ func _on_quit_mouse_entered() -> void:
 
 
 func _on_lang_button_up() -> void:
+	$click.play()
 	if language.lang == "PT":
 		language.lang = "EN"
 	else:
