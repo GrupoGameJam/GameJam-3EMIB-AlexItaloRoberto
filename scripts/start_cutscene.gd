@@ -26,10 +26,30 @@ func _on_skip_button_up() -> void:
 	await $click.finished
 	get_tree().change_scene_to_file("res://scenes/level_1.tscn")
 
+func playbackspeed(scale: float):
+	Engine.time_scale = scale
 
 func _on_skip_mouse_entered() -> void:
 	$hover.play()
 
 
 func _on_skip_mouse_exited() -> void:
+	$hover.play()
+
+
+func _on_x_button_up() -> void:
+	$click.play()
+	if Engine.time_scale == 1:
+		playbackspeed(2)
+		$"Camera2D/CanvasLayer/Control/Skip/2x/Label".text = "1x"
+	else:
+		playbackspeed(1)
+		$"Camera2D/CanvasLayer/Control/Skip/2x/Label".text = "2x"
+
+
+func _on_x_mouse_entered() -> void:
+	$hover.play()
+
+
+func _on_x_mouse_exited() -> void:
 	$hover.play()

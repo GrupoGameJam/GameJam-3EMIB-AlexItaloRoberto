@@ -2,7 +2,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	save_manager.load_game()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -47,3 +47,4 @@ func _on_lang_button_up() -> void:
 		language.lang = "EN"
 	else:
 		language.lang = "PT"
+	save_manager.save_game()

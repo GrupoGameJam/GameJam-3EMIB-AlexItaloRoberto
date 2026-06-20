@@ -12,6 +12,8 @@ config_version=5
 
 config/name="Beyond the Frame"
 run/main_scene="uid://bftfolb7opl0m"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="GrupoGameJam/BTF"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/image="uid://dafnwkqkco3oe"
 config/icon="uid://typ66tlgduka"
@@ -23,6 +25,7 @@ levels="*uid://cilegdub482lv"
 songs="*uid://mmjh2raw0hmx"
 pickups="*uid://dxvj50biwmdd"
 language="*uid://c4j7urjscb6w8"
+save_manager="*uid://bgptn7d6nhlvk"
 
 [display]
 

@@ -90,6 +90,10 @@ func spawnar_porta():
 		$DoorTimer.start()
 
 func _process(delta: float) -> void:
+	if language.lang == "PT":
+		$CanvasLayer/PauseMenu/Lang/Icon.texture = load("res://sprites/PT.png")
+	else:
+		$CanvasLayer/PauseMenu/Lang/Icon.texture = load("res://sprites/EN.png")
 	$CanvasLayer/Control/DoorBar.value = $DoorTimer.time_left * 100
 	if $DoorTimer.is_stopped():
 		$CanvasLayer/Control/DoorBar.value = 100
@@ -308,3 +312,14 @@ func _on_invuln_timeout() -> void:
 
 func _on_door_timer_timeout() -> void:
 	pode_porta2 = true
+
+
+func _on_lang_button_up() -> void:
+	$click.play()
+	if language.lang == "PT":
+		$CanvasLayer/PauseMenu/Lang/Icon.texture = load("res://sprites/EN.png")
+		language.lang = "EN"
+	else:
+		$CanvasLayer/PauseMenu/Lang/Icon.texture = load("res://sprites/PT.png")
+		language.lang = "PT"
+	save_manager.save_game()

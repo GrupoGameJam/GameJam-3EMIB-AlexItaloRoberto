@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://c0wedvxcneqw0" path="res://sprites/tiles/tileset.png" id="1_48p14"]
 
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_go7sj"]
 texture = ExtResource("1_48p14")
 0:2/0 = 0

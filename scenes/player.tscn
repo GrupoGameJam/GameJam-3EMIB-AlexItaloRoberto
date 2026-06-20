@@ -13,13 +13,14 @@
 [ext_resource type="AudioStream" uid="uid://b2fjwn6moovoq" path="res://sounds/UIAccept.mp3" id="9_y4r1p"]
 [ext_resource type="AudioStream" uid="uid://cuhd4wchokub5" path="res://sounds/step.wav" id="10_3v2ag"]
 [ext_resource type="Texture2D" uid="uid://b61aughq4o41u" path="res://sprites/barfull.png" id="10_fulsm"]
+[ext_resource type="Shader" uid="uid://cjkj0e432lg4f" path="res://scripts/blur.gdshader" id="11_60mlk"]
 [ext_resource type="AudioStream" uid="uid://c4fewmyb0438w" path="res://sounds/jump.wav" id="11_jej6c"]
 [ext_resource type="Texture2D" uid="uid://debsakrlmlkfs" path="res://sprites/UIStar.png" id="12_4r5pv"]
 [ext_resource type="AudioStream" uid="uid://bsf6hjqfw0oq5" path="res://sounds/die.wav" id="12_f1ej7"]
 [ext_resource type="Script" uid="uid://dmngluqn7a6we" path="res://scripts/UIstar.gd" id="13_60mlk"]
+[ext_resource type="Texture2D" uid="uid://67h6jhngeexa" path="res://sprites/PT.png" id="13_i4ail"]
 [ext_resource type="AudioStream" uid="uid://dgivu7vttfp6u" path="res://sounds/portal.mp3" id="13_jej6c"]
 [ext_resource type="Shader" uid="uid://btoy852d464yj" path="res://scripts/vinheta.gdshader" id="15_oprun"]
-
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dqkch"]
 radius = 16.0
@@ -149,6 +150,18 @@ atlas = ExtResource("5_fjrip")
 region = Rect2(0, 0, 36, 0)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d2wvv"]
+atlas = ExtResource("5_fjrip")
+region = Rect2(36, 0, 36, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i4ail"]
+shader = ExtResource("11_60mlk")
+shader_parameter/blur = 2.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a38lo"]
+atlas = ExtResource("5_fjrip")
+region = Rect2(0, 0, 36, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ni07"]
 atlas = ExtResource("5_fjrip")
 region = Rect2(36, 0, 36, 0)
 
@@ -340,6 +353,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/PauseMenu" unique_id=1210888857]
+material = SubResource("ShaderMaterial_i4ail")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -373,9 +387,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -88.20001
-offset_top = -73.0
+offset_top = -110.0
 offset_right = 88.20001
-offset_bottom = 25.0
+offset_bottom = -12.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = SubResource("AtlasTexture_y4r1p")
@@ -404,6 +418,35 @@ theme_override_font_sizes/font_size = 28
 text = "Resumir"
 vertical_alignment = 1
 
+[node name="Lang" type="TextureButton" parent="CanvasLayer/PauseMenu" unique_id=1103711473]
+process_mode = 3
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -88.19995
+offset_top = -20.0
+offset_right = 88.19995
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = SubResource("AtlasTexture_a38lo")
+texture_pressed = SubResource("AtlasTexture_a38lo")
+texture_hover = SubResource("AtlasTexture_4ni07")
+texture_disabled = SubResource("AtlasTexture_a38lo")
+texture_focused = SubResource("AtlasTexture_4ni07")
+stretch_mode = 0
+
+[node name="Icon" type="Sprite2D" parent="CanvasLayer/PauseMenu/Lang" unique_id=1853611943]
+process_mode = 3
+texture_filter = 1
+position = Vector2(87, 49)
+scale = Vector2(3, 3)
+texture = ExtResource("13_i4ail")
+
 [node name="Quit" type="TextureButton" parent="CanvasLayer/PauseMenu" unique_id=574497854]
 texture_filter = 1
 layout_mode = 1
@@ -413,9 +456,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -88.20001
-offset_top = 48.0
+offset_top = 71.0
 offset_right = 88.20001
-offset_bottom = 146.0
+offset_bottom = 169.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = SubResource("AtlasTexture_y4r1p")
@@ -551,6 +594,9 @@ one_shot = true
 [connection signal="button_up" from="CanvasLayer/PauseMenu/Resume" to="." method="_on_resume_button_up"]
 [connection signal="mouse_entered" from="CanvasLayer/PauseMenu/Resume" to="." method="_on_resume_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/PauseMenu/Resume" to="." method="_on_resume_mouse_exited"]
+[connection signal="button_up" from="CanvasLayer/PauseMenu/Lang" to="." method="_on_lang_button_up"]
+[connection signal="mouse_entered" from="CanvasLayer/PauseMenu/Lang" to="." method="_on_quit_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/PauseMenu/Lang" to="." method="_on_quit_mouse_exited"]
 [connection signal="button_up" from="CanvasLayer/PauseMenu/Quit" to="." method="_on_quit_button_up"]
 [connection signal="mouse_entered" from="CanvasLayer/PauseMenu/Quit" to="." method="_on_quit_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/PauseMenu/Quit" to="." method="_on_quit_mouse_exited"]
