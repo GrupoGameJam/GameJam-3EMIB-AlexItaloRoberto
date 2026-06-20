@@ -4,6 +4,7 @@
 [ext_resource type="FontFile" uid="uid://baquniuy4tqf8" path="res://fonts/Frickbears-Regular.otf" id="2_dlty7"]
 [ext_resource type="AudioStream" uid="uid://jv20qctkfjff" path="res://sounds/uh.mp3" id="3_r577g"]
 
+
 [sub_resource type="Animation" id="Animation_hlyd0"]
 length = 0.001
 tracks/0/type = "value"

@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://dgivu7vttfp6u" path="res://sounds/portal.mp3" id="6_vmrwc"]
 [ext_resource type="AudioStream" uid="uid://ckfsqh2cyttqu" path="res://sounds/portalAmbient.mp3" id="7_mei1o"]
 
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8gms0"]
 size = Vector2(64, 128)
 

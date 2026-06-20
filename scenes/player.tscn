@@ -20,6 +20,7 @@
 [ext_resource type="AudioStream" uid="uid://dgivu7vttfp6u" path="res://sounds/portal.mp3" id="13_jej6c"]
 [ext_resource type="Shader" uid="uid://btoy852d464yj" path="res://scripts/vinheta.gdshader" id="15_oprun"]
 
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dqkch"]
 radius = 16.0
 height = 86.0

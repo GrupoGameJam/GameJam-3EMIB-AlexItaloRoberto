@@ -1,0 +1,5 @@
+res://src/scenes/menu.tscn
+res://node.gd
+res://scenes/menu.tscn
+res://scripts/language.gd
+res://scripts/menu.gd

@@ -22,6 +22,7 @@ boot_splash/minimum_display_time=2000
 levels="*uid://cilegdub482lv"
 songs="*uid://mmjh2raw0hmx"
 pickups="*uid://dxvj50biwmdd"
+language="*uid://c4j7urjscb6w8"
 
 [display]
 
@@ -29,7 +30,7 @@ window/stretch/mode="viewport"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/anthonyec.camera_preview/plugin.cfg")
+enabled=PackedStringArray()
 
 [global_group]
 
@@ -104,6 +105,10 @@ dialog={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":53,"key_label":0,"unicode":53,"location":0,"echo":false,"script":null)
 ]
 }
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://game_translations.en.translation", "res://game_translations.pt.translation")
 
 [physics]
 

@@ -1,15 +1,2 @@
-RayCast2D
 Sprite2D
-Label
-GPUParticles2D
-AnimationPlayer
-CollisionShape2D
-Area2D
-TextureProgressBar
-Timer
-AudioStreamPlayer2D
-RichTextLabel
-ColorRect
-Control
-CanvasLayer
-Camera2D
+Node

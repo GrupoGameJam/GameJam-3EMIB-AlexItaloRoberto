@@ -17,6 +17,7 @@
 [ext_resource type="Script" uid="uid://dmngluqn7a6we" path="res://scripts/UIstar.gd" id="12_oi1it"]
 [ext_resource type="AudioStream" uid="uid://b2fjwn6moovoq" path="res://sounds/UIAccept.mp3" id="13_i42df"]
 [ext_resource type="AudioStream" uid="uid://dmkrwwrgxxf0s" path="res://sounds/creak1.mp3" id="14_7jp70"]
+[ext_resource type="Texture2D" uid="uid://67h6jhngeexa" path="res://sprites/PT.png" id="14_oi1it"]
 [ext_resource type="AudioStream" uid="uid://5t1k7uwqx72c" path="res://sounds/creak2.mp3" id="15_mxgkd"]
 [ext_resource type="AudioStream" uid="uid://bb3ncbboqtqno" path="res://sounds/slam.mp3" id="16_mxgkd"]
 [ext_resource type="AudioStream" uid="uid://cw80swui5m067" path="res://sounds/nightAmbient.mp3" id="18_3dmrc"]
@@ -566,6 +567,33 @@ theme_override_font_sizes/font_size = 28
 text = "Sair"
 vertical_alignment = 1
 
+[node name="Lang" type="TextureButton" parent="Camera2D/CanvasLayer/Control" unique_id=397560473]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -192.0
+offset_top = -204.0
+offset_right = -15.600098
+offset_bottom = -106.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = SubResource("AtlasTexture_ufwb2")
+texture_pressed = SubResource("AtlasTexture_ufwb2")
+texture_hover = SubResource("AtlasTexture_6cdou")
+texture_disabled = SubResource("AtlasTexture_ufwb2")
+texture_focused = SubResource("AtlasTexture_6cdou")
+stretch_mode = 0
+
+[node name="Icon" type="Sprite2D" parent="Camera2D/CanvasLayer/Control/Lang" unique_id=103718376]
+texture_filter = 1
+position = Vector2(87, 49)
+scale = Vector2(3, 3)
+texture = ExtResource("14_oi1it")
+
 [node name="ColorRect" type="ColorRect" parent="Camera2D/CanvasLayer/Control" unique_id=987457643]
 material = SubResource("ShaderMaterial_v86rl")
 layout_mode = 1
@@ -606,3 +634,5 @@ parameters/looping = true
 [connection signal="mouse_exited" from="Camera2D/CanvasLayer/Control/PlayBtn" to="." method="_on_play_btn_mouse_exited"]
 [connection signal="button_up" from="Camera2D/CanvasLayer/Control/Quit" to="." method="_on_quit_button_up"]
 [connection signal="mouse_entered" from="Camera2D/CanvasLayer/Control/Quit" to="." method="_on_quit_mouse_entered"]
+[connection signal="button_up" from="Camera2D/CanvasLayer/Control/Lang" to="." method="_on_lang_button_up"]
+[connection signal="mouse_entered" from="Camera2D/CanvasLayer/Control/Lang" to="." method="_on_quit_mouse_entered"]

@@ -29,6 +29,7 @@
 [ext_resource type="AudioStream" uid="uid://ejve2u3wv2if" path="res://sounds/portalClose.mp3" id="21_xy4ya"]
 [ext_resource type="AudioStream" uid="uid://cw80swui5m067" path="res://sounds/nightAmbient.mp3" id="25_e1mrh"]
 
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ixkg5"]
 texture = ExtResource("1_55uw1")
 texture_region_size = Vector2i(16, 15)

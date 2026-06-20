@@ -7,7 +7,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if language.lang == "PT":
+		$Camera2D/CanvasLayer/Control/Lang/Icon.texture = load("res://sprites/PT.png")
+	else:
+		$Camera2D/CanvasLayer/Control/Lang/Icon.texture = load("res://sprites/EN.png")
 
 func play():
 	get_tree().change_scene_to_file("res://scenes/start_cutscene.tscn")
@@ -36,3 +39,10 @@ func _on_quit_button_up() -> void:
 
 func _on_quit_mouse_entered() -> void:
 	$hover.play()
+
+
+func _on_lang_button_up() -> void:
+	if language.lang == "PT":
+		language.lang = "EN"
+	else:
+		language.lang = "PT"

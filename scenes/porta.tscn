@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c8kbobp84ol28"]
 
-[ext_resource type="Script" uid="uid://crnakd6wyinv1" path="res://portas.gd" id="1_hlcnn"]
+[ext_resource type="Script" uid="uid://crnakd6wyinv1" path="res://scripts/portas.gd" id="1_hlcnn"]
 [ext_resource type="Shader" uid="uid://lks88x17wg18" path="res://scripts/porta.gdshader" id="2_8gms0"]
 [ext_resource type="FontFile" uid="uid://baquniuy4tqf8" path="res://fonts/Frickbears-Regular.otf" id="2_ede8e"]
 [ext_resource type="Texture2D" uid="uid://de0w1jy3tki6n" path="res://sprites/porta.png" id="2_rwxfp"]
@@ -10,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://dmkrwwrgxxf0s" path="res://sounds/creak1.mp3" id="9_qvu8n"]
 [ext_resource type="AudioStream" uid="uid://dvh2y8ftoebmq" path="res://sounds/woosh.mp3" id="9_tcsge"]
 [ext_resource type="AudioStream" uid="uid://5t1k7uwqx72c" path="res://sounds/creak2.mp3" id="10_tcsge"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8gms0"]
 size = Vector2(64, 128)

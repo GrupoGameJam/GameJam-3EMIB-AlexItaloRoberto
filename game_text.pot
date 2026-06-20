@@ -1,0 +1,133 @@
+# LANGUAGE translation for AC Games for the following files:
+# res://scenes/boundary.tscn
+# res://scenes/cutscene_final.tscn
+# res://scenes/dialog_text.tscn
+# res://scenes/dialog_trigger.tscn
+# res://scenes/diezone.gd
+# res://scenes/enemy.tscn
+# res://scenes/final_level.tscn
+# res://scenes/killzone.tscn
+# res://scenes/level_1.tscn
+# res://scenes/level_2.tscn
+# res://scenes/level_3.tscn
+# res://scenes/level_4.tscn
+# res://scenes/level_5.tscn
+# res://scenes/menu.tscn
+# res://scenes/player.tscn
+# res://scenes/porta.tscn
+# res://scenes/star.tscn
+# res://scenes/start_cutscene.tscn
+# res://scenes/templete.tscn
+# res://scenes/tutorial_keys.tscn
+# res://scripts/block_porta.gd
+# res://scripts/boundary.gd
+# res://scripts/cutscene_final.gd
+# res://scripts/delete_trigger2.gd
+# res://scripts/dialog_text.gd
+# res://scripts/dialog_trigger.gd
+# res://scripts/enemy.gd
+# res://scripts/final_level.gd
+# res://scripts/killzone.gd
+# res://scripts/levels.gd
+# res://scripts/menu.gd
+# res://scripts/music.gd
+# res://scripts/pickups.gd
+# res://scripts/player.gd
+# res://scripts/portas.gd
+# res://scripts/songs.gd
+# res://scripts/star.gd
+# res://scripts/start_cutscene.gd
+# res://scripts/trigger_final.gd
+# res://scripts/tutorial_keys.gd
+# res://scripts/UIstar.gd
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: AC Games\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: scenes/cutscene_final.tscn
+msgid "O-o que?"
+msgstr ""
+
+#: scenes/cutscene_final.tscn
+msgid ""
+"Arte, Sons, Música, Programação:\r\n"
+"Roberto de Andrade Paiva Filho\r\n"
+"\r\n"
+"Level Design e Playtesting:\r\n"
+"Alex Chen Marubayashi\r\n"
+"\r\n"
+"Documentação e Gestão:\r\n"
+"Ítalo Santos de Morais"
+msgstr ""
+
+#: scenes/dialog_text.tscn
+msgid "This is an example of the Typewriter effect bla bla bla bla I like men"
+msgstr ""
+
+#: scenes/final_level.tscn
+#: scenes/porta.tscn
+msgid "E"
+msgstr ""
+
+#: scenes/level_1.tscn
+msgid "Esta porta parece estar trancada... quem sabe alguém passe por aqui futuramente e a abra?"
+msgstr ""
+
+#: scenes/level_1.tscn
+msgid "Parece que tinha uma ponte aqui a tempos atrás... Talvez o passado tenha a resposta."
+msgstr ""
+
+#: scenes/level_1.tscn
+#: scenes/level_2.tscn
+#: scenes/level_3.tscn
+#: scenes/level_4.tscn
+#: scenes/level_5.tscn
+msgid "Eu não quero ir para esta direção..."
+msgstr ""
+
+#: scenes/level_2.tscn
+#: scenes/level_3.tscn
+#: scenes/level_4.tscn
+msgid "Não avançarei mais que isso, senão irei cair..."
+msgstr ""
+
+#: scenes/level_5.tscn
+#: scenes/player.tscn
+msgid "F"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Clique na porta"
+msgstr ""
+
+#: scenes/menu.tscn
+#: scenes/player.tscn
+msgid "Sair"
+msgstr ""
+
+#: scenes/player.tscn
+#: scenes/start_cutscene.tscn
+msgid "Pause"
+msgstr ""
+
+#: scenes/player.tscn
+msgid "Resumir"
+msgstr ""
+
+#: scenes/start_cutscene.tscn
+msgid "BLABLABLABLABLABLABLAB"
+msgstr ""
+
+#: scenes/start_cutscene.tscn
+msgid "Pular"
+msgstr ""
+
+msgid "AC Games"
+msgstr ""

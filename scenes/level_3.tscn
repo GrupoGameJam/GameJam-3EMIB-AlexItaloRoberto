@@ -13,6 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://b0wt2ajf42c2w" path="res://sounds/song1.mp3" id="11_q7pjq"]
 [ext_resource type="Script" uid="uid://b73g3rk7lr5ui" path="res://scripts/music.gd" id="12_wa6ex"]
 
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ne2mo"]
 texture = ExtResource("2_ax3dk")
 texture_region_size = Vector2i(16, 15)

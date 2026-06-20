@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://csyue60q5eqep" path="res://sprites/star.png" id="2_ef0hr"]
 [ext_resource type="Texture2D" uid="uid://debsakrlmlkfs" path="res://sprites/UIStar.png" id="4_8lrp4"]
 
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_8d8bx"]
 radius = 50.039986
 

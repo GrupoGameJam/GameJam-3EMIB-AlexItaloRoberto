@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://bqx0i0s4q0wcc" path="res://scenes/diezone.gd" id="5_c4w8v"]
 [ext_resource type="AudioStream" uid="uid://bsf6hjqfw0oq5" path="res://sounds/die.wav" id="5_xwavj"]
 
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_xwavj"]
 atlas = ExtResource("2_5uy6h")
 region = Rect2(16, 0, 16, 16)
