@@ -10,11 +10,11 @@ config_version=5
 
 [application]
 
-config/name="AC Games"
+config/name="Beyond the Frame"
 run/main_scene="uid://bftfolb7opl0m"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/image="uid://dafnwkqkco3oe"
-config/icon="res://icon.svg"
+config/icon="uid://typ66tlgduka"
 boot_splash/minimum_display_time=2000
 
 [autoload]
@@ -27,6 +27,7 @@ language="*uid://c4j7urjscb6w8"
 [display]
 
 window/stretch/mode="viewport"
+mouse_cursor/custom_image="uid://0eve04qfowcl"
 
 [editor_plugins]
 
