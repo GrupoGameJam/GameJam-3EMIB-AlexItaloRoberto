@@ -12,7 +12,6 @@
 [ext_resource type="AudioStream" uid="uid://cuhd4wchokub5" path="res://sounds/step.wav" id="9_64a0w"]
 [ext_resource type="AudioStream" uid="uid://dbywien3m3dv" path="res://sounds/day_ambience.mp3" id="10_utw07"]
 
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dgn2j"]
 texture = ExtResource("2_mxs68")
 texture_region_size = Vector2i(16, 15)
@@ -361,7 +360,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(3.4999, 3.5, 7, 7.5),
 "transitions": PackedFloat32Array(1e-05, 1, 0.27739248, 1),
 "update": 0,
-"values": [Vector2(364, -25), Vector2(352, 22.7), Vector2(352, 19.999996), Vector2(307, 7)]
+"values": [Vector2(364, -25), Vector2(352, 22.7), Vector2(352, 22.7), Vector2(307, 7)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -548,14 +547,7 @@ grow_vertical = 2
 theme_override_constants/outline_size = 28
 theme_override_fonts/normal_font = ExtResource("6_nxxwx")
 theme_override_font_sizes/normal_font_size = 44
-text = "Arte, Sons, Música, Programação:
-Roberto de Andrade Paiva Filho
-
-Level Design e Playtesting:
-Alex Chen Marubayashi
-
-Documentação e Gestão:
-Ítalo Santos de Morais"
+text = "CREDITS_TEXT"
 horizontal_alignment = 1
 vertical_alignment = 1
 visible_characters = 0

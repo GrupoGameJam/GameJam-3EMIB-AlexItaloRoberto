@@ -6,7 +6,7 @@ func _process(delta: float) -> void:
 	$Label.visible = player_dentro
 	if player_dentro:
 		if Input.is_action_just_pressed("dialog"):
-			get_tree().change_scene_to_file("res://cutscene_final.tscn")
+			get_tree().change_scene_to_file("res://scenes/cutscene_final.tscn")
 
 func _on_body_entered(body: Node2D) -> void:
 	if body != player:
